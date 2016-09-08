@@ -1,8 +1,10 @@
 package clock;
 
+import display.Display;
+
 public class clock {
-	private Display hour=new Display(24);
-	private Display minute=new Display(60);
+	private display.Display hour=new Display(24);
+	private display.Display minute=new Display(60);
 	
 	public void start(){
 		while(true){

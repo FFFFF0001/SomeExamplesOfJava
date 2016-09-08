@@ -1,8 +1,9 @@
-package clock;
+package display;
 
 public class Display {
 	private int limit=0;
 	private int value=0;
+	private static int step=1;
 	
 	public Display(int limit){
 		this.limit=limit;
