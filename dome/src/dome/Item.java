@@ -30,7 +30,7 @@ public class Item {
 	}
 	public void print() {
 		// TODO Auto-generated method stub
-		System.out.println(title);
+		System.out.println("title");
 	}
 
 }

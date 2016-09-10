@@ -23,7 +23,7 @@ public class DVD extends Item {
 	public void print() {
 		// TODO Auto-generated method stub
 		System.out.print("DVD:");
-		super.print();
+		super.print();//Item
 		System.out.print(director);
 	}
 

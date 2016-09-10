@@ -27,6 +27,7 @@ public class Database {
 	public void list(){
 		for(Item item:listItem){
 			item.print();
+			System.out.println();
 		}
 	}
 	public static void main(String[] args) {
@@ -35,7 +36,10 @@ public class Database {
 		db.add(new CD("abc", "abc", 1, 2, "..."));
 		db.add(new CD("def", "def", 3, 4, "..."));
 		db.add(new DVD("xxx","yyy",5,"...."));
+		db.add(new Videogame("ddd",10,true,"...",6));
 		db.list();
+
+		
 	}
 
 }

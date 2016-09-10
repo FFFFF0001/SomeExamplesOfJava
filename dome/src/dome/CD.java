@@ -14,9 +14,22 @@ public class CD extends Item {
 //		this.playingTime = playingTime;
 //		this.comment = comment;
 	}
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		CD cc=(CD)obj;//down cast
+		return artist.equals(cc.artist);
+	}
+	@Override
+	public String toString() {
+		return "CD [artist=" + artist + ", numofTracks=" + numofTracks + ", toString()=" + super.toString() + "]";
+	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CD cd=new CD("a","b",1,2,"...");
+		CD cd1=new CD("a","b",1,2,"...");
+		System.out.println(cd.equals(cd1));
+		
 		cd.print();
 	}
 //	public void print() {
