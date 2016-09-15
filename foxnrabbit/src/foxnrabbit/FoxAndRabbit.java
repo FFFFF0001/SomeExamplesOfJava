@@ -1,7 +1,9 @@
 package foxnrabbit;
 
+import java.awt.BorderLayout;
 import java.util.ArrayList;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 import animal.Animal;
@@ -30,10 +32,13 @@ public class FoxAndRabbit {
 		}
 		theView = new View(theField);
 		JFrame frame = new JFrame();
+		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setTitle("Cells");
 		frame.add(theView);
+		JButton btnStep=new JButton("µ¥²½");
+		frame.add(btnStep,BorderLayout.NORTH);
 		frame.pack();
 		frame.setVisible(true);
 	}
