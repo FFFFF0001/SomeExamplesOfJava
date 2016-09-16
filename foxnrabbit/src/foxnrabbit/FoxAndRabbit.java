@@ -1,6 +1,8 @@
 package foxnrabbit;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -17,7 +19,18 @@ import field.View;
 public class FoxAndRabbit {
 	private Field theField;
 	private View theView;
+	private JFrame frame;
 	
+	private class StepListener implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			step();
+			frame.repaint();
+		}
+		
+	}//内部类
 	public FoxAndRabbit(int size) {
 		theField = new Field(size, size);
 		for ( int row = 0; row<theField.getHeight(); row++ ) {
@@ -31,14 +44,29 @@ public class FoxAndRabbit {
 			}
 		}
 		theView = new View(theField);
-		JFrame frame = new JFrame();
+		frame = new JFrame();
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setResizable(false);
 		frame.setTitle("Cells");
-		frame.add(theView);
+		frame.add(theView,BorderLayout.CENTER);
 		JButton btnStep=new JButton("单步");
+		JButton btnStep2=new JButton("双步");
 		frame.add(btnStep,BorderLayout.NORTH);
+		frame.add(btnStep2,BorderLayout.WEST);
+		btnStep.addActionListener(new StepListener());
+		btnStep2.addActionListener(new StepListener());
+//		btnStep.addActionListener(new ActionListener() {
+//			
+//			@Override
+//			public void actionPerformed(ActionEvent arg0) {
+//				// TODO Auto-generated method stub
+//				System.out.println("anxiale!");
+//				step();
+//				frame.repaint();
+//				
+//			}
+//		});
 		frame.pack();
 		frame.setVisible(true);
 	}
@@ -98,7 +126,7 @@ public class FoxAndRabbit {
 	
 	public static void main(String[] args) {
 		FoxAndRabbit fnr = new FoxAndRabbit(50);
-		fnr.start(100);
+		//fnr.start(100);
 	}
 
 }
