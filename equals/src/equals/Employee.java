@@ -51,4 +51,7 @@ public class Employee {
 	public String toString(){
 		return getClass().getName()+"[name="+name+",salary="+salary+",hireDay="+hireDay+"]";
 	}
+	public static void main(String[] args){
 }
+}
+
