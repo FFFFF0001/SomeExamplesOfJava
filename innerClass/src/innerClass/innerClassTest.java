@@ -12,10 +12,12 @@ public class innerClassTest {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		final int a;
 		TalkingClock clock=new TalkingClock(1000,true);
 		clock.start();
 		JOptionPane.showMessageDialog(null, "Quit program?");
 		System.exit(0);
+		
 	}
 }
 	class TalkingClock{

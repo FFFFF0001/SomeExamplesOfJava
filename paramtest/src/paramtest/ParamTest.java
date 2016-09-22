@@ -4,6 +4,7 @@ public class ParamTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		System.out.println("Testing tripleValue:");
 		double percent=10.0;
 		System.out.println("Before:Percent="+percent);
