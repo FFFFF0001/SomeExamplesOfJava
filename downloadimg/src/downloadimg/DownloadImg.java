@@ -29,7 +29,6 @@ public class DownloadImg {
                 while ((count = instream.read(b)) != -1) {
                     output.write(b, 0, count);
                 }
-
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -53,11 +52,11 @@ public class DownloadImg {
         CloseableHttpResponse response = null;
         try {
             response = httpClient.execute(httpGet);
-            Pattern p = Pattern.compile("g_img=\\{url:.*\\.jpg");
+            Pattern p = Pattern.compile("http://.*?\\.jpg");
             Matcher m = p.matcher(EntityUtils.toString(response.getEntity()));
             String address = null;
             if (m.find()) {
-                address = m.group().split("'")[1].split("'")[0];
+                address = m.group();
             } else {
                 System.exit(0);
             }
@@ -67,7 +66,7 @@ public class DownloadImg {
             CloseableHttpResponse responseImg = httpClient.execute(getImage);
             HttpEntity entity = responseImg.getEntity();
 
-            writeImgEntityToFile(entity,"/home/geekgao/Õº∆¨/BingImg/" + dateFormat.format(new Date()) + ".jpg");
+            writeImgEntityToFile(entity,dateFormat.format(new Date()) + ".jpg");
 
             System.out.println("œ¬‘ÿÕÍ±œ.");
         } catch (IOException e) {
