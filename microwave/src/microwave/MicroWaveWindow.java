@@ -50,7 +50,7 @@ public class MicroWaveWindow extends JFrame{
         midPanel.add(midDownPanel,BorderLayout.SOUTH);
 
         JLabel fire = new JLabel("火力");
-        JRadioButton bigFire = new JRadioButton("大火");
+        JRadioButton bigFire = new JRadioButton("大火");//圆形按钮
         JRadioButton midFire = new JRadioButton("中火");
         JRadioButton smallFire = new JRadioButton("小火");
         midUpPanel.add(fire);
