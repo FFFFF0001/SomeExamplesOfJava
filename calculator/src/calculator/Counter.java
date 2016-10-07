@@ -3,9 +3,9 @@ package calculator;
 import java.awt.*;
 import javax.swing.*;
 import java.awt.event.*;
-class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØĞ´¸Ã·½·¨
-	static JFrame f=new JFrame("¼ÆËãÆ÷"); //JFrameÊÇSwing¶¥²ãÈİÆ÷£¬°üº¬Ò»¸öJRootPane×÷ÎªÒ»¸öÎ¨Ò»×ÓÈİÆ÷´°Ìå
-	static JTextField text1=new JTextField("");//JTextFieldÇáÁ¿¼¶×é¼ş£¬ÔÊĞí±à¼­µ¥ĞĞÎÄ±¾¡£
+class Counter extends WindowAdapter{ //ï¿½Ì³Ğ´ï¿½ï¿½ï¿½ WindowEvent ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ğ´ï¿½Ã·ï¿½ï¿½ï¿½
+	static JFrame f=new JFrame("calculator"); //JFrameï¿½ï¿½Swingï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½JRootPaneï¿½ï¿½ÎªÒ»ï¿½ï¿½Î¨Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	static JTextField text1=new JTextField("");//JTextFieldï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à¼­ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½
 	static String source=""; 
 	static String cal="";
 	static String object="";
@@ -14,8 +14,8 @@ class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØ
 	static boolean flag2=false;
 	public void init() {
 		try  {
-			Container c=f.getContentPane();  //·µ»Ø´Ë´°ÌåµÄ contentPane ¶ÔÏó
-			JPanel pan1=new JPanel(); //JPanel Îªjavax.swing°üÖĞµÄ£¬ÎªÃæ°åÈİÆ÷£¬¿ÉÒÔ¼ÓÈëµ½JFrameÖĞ , Ëü×ÔÉíÊÇ¸öÈİÆ÷£¬¿ÉÒÔ°ÑÆäËûcompont¼ÓÈëµ½JPanelÖĞ,ÈçJButton,JTextArea,JTextFiledµÈ£¬ÁíÍâÒ²¿ÉÒÔÔÚËüÉÏÃæ»æÍ¼
+			Container c=f.getContentPane();  //ï¿½ï¿½ï¿½Ø´Ë´ï¿½ï¿½ï¿½ï¿½ contentPane ï¿½ï¿½ï¿½ï¿½
+			JPanel pan1=new JPanel(); //JPanel Îªjavax.swingï¿½ï¿½ï¿½ĞµÄ£ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô¼ï¿½ï¿½ëµ½JFrameï¿½ï¿½ , ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô°ï¿½ï¿½ï¿½ï¿½ï¿½compontï¿½ï¿½ï¿½ëµ½JPanelï¿½ï¿½,ï¿½ï¿½JButton,JTextArea,JTextFiledï¿½È£ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼
 			JButton b1=new JButton("1");
 			JButton b2=new JButton("2");
 			JButton b3=new JButton("3");
@@ -32,14 +32,14 @@ class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØ
 			JButton b14=new JButton("/");
 			JButton b15=new JButton(".");
 			JButton b16=new JButton("=");
-			JButton bclar=new JButton("ÇåÁã");
-			text1.setHorizontalAlignment(JTextField.RIGHT);//ÉèÖÃÎÄ±¾µÄË®Æ½¶ÔÆë·½Ê½
+			JButton bclar=new JButton("ï¿½ï¿½ï¿½ï¿½");
+			text1.setHorizontalAlignment(JTextField.RIGHT);//ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½Ë®Æ½ï¿½ï¿½ï¿½ë·½Ê½
 			c.add(text1,"North");
 			c.add(pan1); 
-			A aa=new A();  //AÊÇ¶¨ÒåÒ»¸öÀàÊµÏÖĞĞÎª½Ó¿Ú£¬ÊµÏÖ°´Å¥ÊÂ¼ş
-			Result re=new Result(); //ÊµÏÖÔËËã½á¹ûÊÂ¼ş
-			Opertion op=new Opertion();//ÔËËã·ûºÅ°´Å¥ÊÂ¼ş
-			Clar cl=new Clar(); //ÇåÁã
+			A aa=new A();  //Aï¿½Ç¶ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½Îªï¿½Ó¿Ú£ï¿½Êµï¿½Ö°ï¿½Å¥ï¿½Â¼ï¿½
+			Result re=new Result(); //Êµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
+			Opertion op=new Opertion();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å°ï¿½Å¥ï¿½Â¼ï¿½
+			Clar cl=new Clar(); //ï¿½ï¿½ï¿½ï¿½
 			b1.addActionListener(aa);
 			b2.addActionListener(aa); 
 			b3.addActionListener(aa);
@@ -84,7 +84,7 @@ class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØ
 	class A implements ActionListener {
 		public void actionPerformed(ActionEvent e)  {
 			String a=text1.getText();
-			String s=e.getActionCommand(); //·µ»ØÓë´Ë¶¯×÷Ïà¹ØµÄÃüÁî×Ö·û´®
+			String s=e.getActionCommand(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½ï¿½ï¿½Øµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 			if(a.equals(".")||a.equals("+")||a.equals("-")||a.equals("*")||a.equals("/"))
 				text1.setText(s);
 			else {
@@ -110,7 +110,7 @@ class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØ
 	class Result implements ActionListener  { 
 		public void actionPerformed(ActionEvent e)  {
 			double num1;
-			num1=Double.parseDouble(source); //½«×Ö·û´®×ª»»³ÉdoubleÀàĞÍÊı¾İ
+			num1=Double.parseDouble(source); //ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½doubleï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			object=text1.getText();
 			double num2; 
 			num2=Double.parseDouble(object);
@@ -146,10 +146,10 @@ class Counter extends WindowAdapter{ //¼Ì³Ğ´´½¨ WindowEvent ÕìÌıÆ÷²¢ÎªËùĞèÊÂ¼şÖØ
 	public void windowClosing(WindowEvent e){ 
 		System.exit(1);
 		}
-	public void windowOpened(WindowEvent e){} //ÒÑ´ò¿ª´°¿ÚÊ±µ÷ÓÃ¡£
-	public void windowIconified(WindowEvent e){} //Í¼±ê»¯´°¿ÚÊ±µ÷ÓÃ¡£
-	public void windowDeiconified(WindowEvent e){}//È¡ÏûÍ¼±ê»¯´°¿ÚÊ±µ÷ÓÃ¡£
-	public void windowClosed(WindowEvent e){} //µ±´°¿ÚÒÑ±»¹Ø±ÕÊ±µ÷ÓÃ¡£
-	public void windowActivated(WindowEvent e){}//¼¤»î´°¿ÚÊ±µ÷ÓÃ¡£
-	public void windowDeactivated(WindowEvent e){}//Í£ÓÃ´°¿ÚÊ±µ÷ÓÃ¡£
+	public void windowOpened(WindowEvent e){} //ï¿½Ñ´ò¿ª´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
+	public void windowIconified(WindowEvent e){} //Í¼ï¿½ê»¯ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
+	public void windowDeiconified(WindowEvent e){}//È¡ï¿½ï¿½Í¼ï¿½ê»¯ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
+	public void windowClosed(WindowEvent e){} //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ±ï¿½ï¿½Ø±ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
+	public void windowActivated(WindowEvent e){}//ï¿½ï¿½ï¿½î´°ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
+	public void windowDeactivated(WindowEvent e){}//Í£ï¿½Ã´ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ã¡ï¿½
 	}
