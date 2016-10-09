@@ -6,48 +6,40 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- * 
- * <p>Title: JdbcTest</p>
- * <p>Description:Í¨¹ıµ¥¶ÀµÄjdbc³ÌĞò£¬×Ü½áÆäÖĞµÄÎÊÌâ </p>
- * <p>Company: www.itcast.com</p> 
- * @author	´«ÖÇ.ÑàÇà
- * @date	2015-4-22ÉÏÎç9:16:05
- * @version 1.0
- */
+
 public class JdbcTest {
 	
 	public static void main(String[] args) {
 		
-		//Êı¾İ¿âÁ¬½Ó
+		//ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½
 		Connection connection = null;
-		//Ô¤±àÒëµÄStatement£¬Ê¹ÓÃÔ¤±àÒëµÄStatementÌá¸ßÊı¾İ¿âĞÔÄÜ
+		//Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Statementï¿½ï¿½Ê¹ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½Statementï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½
 		PreparedStatement preparedStatement = null;
-		//½á¹û ¼¯
+		//ï¿½ï¿½ï¿½ ï¿½ï¿½
 		ResultSet resultSet = null;
 		
 		try {
-			//¼ÓÔØÊı¾İ¿âÇı¶¯
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			//Í¨¹ıÇı¶¯¹ÜÀíÀà»ñÈ¡Êı¾İ¿âÁ´½Ó
-			connection =  DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8", "root", "mysql");
-			//¶¨ÒåsqlÓï¾ä ?±íÊ¾Õ¼Î»·û
+			//Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½İ¿ï¿½ï¿½ï¿½ï¿½ï¿½
+			connection =  DriverManager.getConnection("jdbc:mysql://localhost:3306/mybatis?characterEncoding=utf-8", "root", "hzb19961010");
+			//ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ï¿½ ?ï¿½ï¿½Ê¾Õ¼Î»ï¿½ï¿½
 			String sql = "select * from user where username = ?";
-			//»ñÈ¡Ô¤´¦Àístatement
+			//ï¿½ï¿½È¡Ô¤ï¿½ï¿½ï¿½ï¿½statement
 			preparedStatement = connection.prepareStatement(sql);
-			//ÉèÖÃ²ÎÊı£¬µÚÒ»¸ö²ÎÊıÎªsqlÓï¾äÖĞ²ÎÊıµÄĞòºÅ£¨´Ó1¿ªÊ¼£©£¬µÚ¶ş¸ö²ÎÊıÎªÉèÖÃµÄ²ÎÊıÖµ
-			preparedStatement.setString(1, "ÍõÎå");
-			//ÏòÊı¾İ¿â·¢³ösqlÖ´ĞĞ²éÑ¯£¬²éÑ¯³ö½á¹û¼¯
+			//ï¿½ï¿½ï¿½Ã²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªsqlï¿½ï¿½ï¿½ï¿½Ğ²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å£ï¿½ï¿½ï¿½1ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ÃµÄ²ï¿½ï¿½ï¿½Öµ
+			preparedStatement.setString(1, "ï¿½ï¿½ï¿½ï¿½");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½İ¿â·¢ï¿½ï¿½sqlÖ´ï¿½Ğ²ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			resultSet =  preparedStatement.executeQuery();
-			//±éÀú²éÑ¯½á¹û¼¯
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½
 			while(resultSet.next()){
 				System.out.println(resultSet.getString("id")+"  "+resultSet.getString("username"));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally{
-			//ÊÍ·Å×ÊÔ´
+			//ï¿½Í·ï¿½ï¿½ï¿½Ô´
 			if(resultSet!=null){
 				try {
 					resultSet.close();
