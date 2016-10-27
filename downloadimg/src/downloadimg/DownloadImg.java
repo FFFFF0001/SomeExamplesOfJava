@@ -44,7 +44,7 @@ public class DownloadImg {
     }
 
     public static void main(String[] args) {
-        System.out.println("»ñÈ¡BingÍ¼Æ¬µØÖ·ÖÐ¡­¡­");
+        System.out.println("http://cn.bing.com/");
 
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -60,15 +60,15 @@ public class DownloadImg {
             } else {
                 System.exit(0);
             }
-            System.out.println("Í¼Æ¬µØÖ·:" + address);
-            System.out.println("ÕýÔÚÏÂÔØ¡­¡­");
+            System.out.println("Í¼Æ¬ï¿½ï¿½Ö·:" + address);
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¡ï¿½ï¿½ï¿½");
             HttpGet getImage = new HttpGet(address);
             CloseableHttpResponse responseImg = httpClient.execute(getImage);
             HttpEntity entity = responseImg.getEntity();
 
             writeImgEntityToFile(entity,dateFormat.format(new Date()) + ".jpg");
 
-            System.out.println("ÏÂÔØÍê±Ï.");
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
