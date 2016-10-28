@@ -1,0 +1,12 @@
+java.lang.NoClassDefFoundError: org/apache/http/client/methods/HttpUriRequest
+	at java.lang.Class.getDeclaredMethods0(Native Method)
+	at java.lang.Class.privateGetDeclaredMethods(Unknown Source)
+	at java.lang.Class.getDeclaredMethod(Unknown Source)
+	at com.exe4j.runtime.LauncherEngine.launch(LauncherEngine.java:60)
+	at com.exe4j.runtime.WinLauncher.main(WinLauncher.java:101)
+Caused by: java.lang.ClassNotFoundException: org.apache.http.client.methods.HttpUriRequest
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 5 more

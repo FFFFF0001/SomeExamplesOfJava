@@ -6,6 +6,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.apache.http.client.methods.HttpUriRequest;
 
 import java.io.*;
 import java.text.SimpleDateFormat;
