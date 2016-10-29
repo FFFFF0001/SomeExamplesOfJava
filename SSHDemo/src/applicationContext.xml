@@ -10,7 +10,7 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">  
             <property name="jdbcUrl">  
             <!--如果直接用value属性，而不用value标签，则需要将“&”转义(&) ,用value标签，<span style="color:#FF0000;">标签中一定不能含有空格、回车，因为它会将空格转换成"&nbsp;"</span>，导致数据库会连接不上，除非重写数据源 -->  
-            <value><![CDATA[jdbc:mysql://localhost:3306/sshdemo?useUnicode=true&characterEncoding=UTF8&useServerPrepStmts=true&prepStmtCacheSqlLimit=256&cachePrepStmts=true&prepStmtCacheSize=256&rewriteBatchedStatements=true]]></value>  
+            <value><![CDATA[jdbc:mysql://localhost:3306/new_schema2?useUnicode=true&characterEncoding=UTF8&useServerPrepStmts=true&prepStmtCacheSqlLimit=256&cachePrepStmts=true&prepStmtCacheSize=256&rewriteBatchedStatements=true]]></value>  
         </property>  
         <property name="driverClass" value="com.mysql.jdbc.Driver"></property>  
         <property name="user" value="root"></property>  
@@ -27,4 +27,5 @@
     <!-- 配置spring的扫描器，然后给我们的类加上spring组件注解，就可以实现bean的自动载入-->  
 	<context:component-scan base-package="action,service,dao">  
 	</context:component-scan>
+	
     </beans>

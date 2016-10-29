@@ -13,10 +13,7 @@ import org.springframework.stereotype.Controller;
 import bean.User;  
 import service.UserService;  
   
-/** 
- * @author Beauxie 
- * 
- */  
+
 @Controller//用于标注控制层组件  
 @Namespace("/user")//url前缀  
 @Scope("prototype")//Action默认是单例，但实际开发中，一般是多例，因为一般一个Action可能会对应多个不同的请求  

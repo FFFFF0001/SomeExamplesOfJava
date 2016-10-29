@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import bean.User;  
   
 /** 
- * @author Beauxie 
+  
  * Dao层，对数据库进行操作 
  */  
 @Repository//这个属性对应的是持久层(一般为Dao层)，说明交给spring管理，而对应的包下的类名也会有一个"S"  
