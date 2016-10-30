@@ -1,7 +1,7 @@
 /*
  * BookBean.java
  *
- * Created on 2006Äê5ÔÂ20ÈÕ, ÏÂÎç6:38
+ * Created on 2006ï¿½ï¿½5ï¿½ï¿½20ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½6:38
  *
  * To change this template, choose Tools | Options and locate the template under
  * the Source Creation and Management node. Right-click the template and choose
@@ -11,10 +11,7 @@
 package cn.edu.uestc.pandawireless;
 import java.util.Date;
 import java.io.*;
-/**
- *
- * @author ĞÜÃ¨ÏşÏ£
- */
+
 public class BookBean {
     private String indexid ;
     private String bookname;

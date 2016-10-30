@@ -1,7 +1,7 @@
 /*
  * Scrollable.java
  *
- * Created on 2006Äê5ÔÂ23ÈÕ, ÉÏÎç12:24
+ * Created on 2006ï¿½ï¿½5ï¿½ï¿½23ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½12:24
  *
  * To change this template, choose Tools | Options and locate the template under
  * the Source Creation and Management node. Right-click the template and choose
