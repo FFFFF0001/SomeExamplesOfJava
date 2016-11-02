@@ -19,7 +19,7 @@ public class StackTraceTest {
 		Scanner in=new Scanner(System.in);
 		System.out.println("Enter n:");
 		int n=in.nextInt();
-
+		factorial(n);
 		
 	}
 }
